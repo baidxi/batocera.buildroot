@@ -80,5 +80,6 @@ FLUIDSYNTH_DEPENDENCIES += systemd
 else
 FLUIDSYNTH_CONF_OPTS += -Denable-systemd=0
 endif
+FLUIDSYNTH_CONF_OPTS += -DCMAKE_NO_SYSTEM_FROM_IMPORTED=1
 
 $(eval $(cmake-package))
